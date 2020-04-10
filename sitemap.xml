@@ -3,37 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/chapter-5/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/post/chapter-5/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/about/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/post/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://muizmalik.github.io/coffeeblog/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

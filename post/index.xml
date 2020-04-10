@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on CoffeeDude!</title>
-    <link>http://example.org/post/</link>
+    <link>https://muizmalik.github.io/coffeeblog/post/</link>
     <description>Recent content in Blog on CoffeeDude!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://muizmalik.github.io/coffeeblog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/post/chapter-5/</link>
+      <link>https://muizmalik.github.io/coffeeblog/post/chapter-5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/post/chapter-5/</guid>
+      <guid>https://muizmalik.github.io/coffeeblog/post/chapter-5/</guid>
       <description>When people think of coffee, they usually think of its ability to provide an energy boost. However, according to some research, it can also offer some other important health benefits, such as a lower risk of liver cancer, type 2 diabetes, and heart failure.
 Researchers have looked at the benefits of drinking coffee for conditions such as diabetes, cardiovascular disease, inflammatory bowel disease, and liver disease. There is evidence to support some, but not all, of these claims.</description>
     </item>
