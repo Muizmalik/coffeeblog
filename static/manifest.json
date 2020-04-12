@@ -3,27 +3,27 @@
   "short_name": "coffeeblog",
   "icons": [
     {
-      "src": "/icon/favicon-128.png",
+      "src": "/static/icon/favicon-128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "/icon/apple-touch-icon-144x144.png",
+      "src": "/static/icon/apple-touch-icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/icon/apple-touch-icon-152x152.png",
+      "src": "/static/icon/apple-touch-icon-152x152.png",
       "sizes": "152x152",
       "type": "image/png"
     },
     {
-      "src": "/icon/favicon-196x196.png",
+      "src": "/static/icon/favicon-196x196.png",
       "sizes": "196x196",
       "type": "image/png"
     },
     {
-      "src": "/icon/splash.png",
+      "src": "/static/icon/splash.png",
       "sizes": "512x512",
       "type": "image/png"
     }
