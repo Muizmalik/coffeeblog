@@ -1,62 +1,58 @@
-const cacheName = 'v1';
+var APP_PREFIX = 'coffeeblog'     // Identifier for this app (this needs to be consistent across every cache update)
+var VERSION = 'version_01'              // Version of the off-line cache (change this value everytime you want to update cache)
+var CACHE_NAME = APP_PREFIX + VERSION
+var URLS = [                            // Add URL you want to cache in this list.
+  '/coffeeblog/',                     // If you have separate JS/CSS files,
+  '/coffeeblog/index.html'            // add path to those files here
+]
 
-const cacheAssets = [
-    '/coffeeblog/layouts/index.html',
-    '/coffeeblog/static/manifest.json',
-    '/coffeeblog/layouts/_default/baseof.html',
-    '/coffeeblog/layouts/_default/list.html',
-    '/coffeeblog/layouts/_default/single.html',
-    '/coffeeblog/layouts/_default/taxonomy.html',
-    '/coffeeblog/layouts/_default/terms.html',
-    '/coffeeblog/layouts/page/single.html',
-    '/coffeeblog/layouts/post/list.html',
-    '/coffeeblog/layouts/post/summary-with-image.html',
-    '/coffeeblog/layouts/post/summary.html',
-    '/coffeeblog/index.html',
-    '/coffeeblog/404.html',
-    '/coffeeblog/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css',
-    '/coffeeblog/dist/js/app.3fc0f988d21662902933.js',
-    '/coffeeblog/images/coffee.jpg',
-    '/coffeeblog/images/coffee2.jpg',
-    '/coffeeblog/images/coffee3.jpg',
-  
-];
+// Respond with cached resources
+self.addEventListener('fetch', function (e) {
+  console.log('fetch request : ' + e.request.url)
+  e.respondWith(
+    caches.match(e.request).then(function (request) {
+      if (request) { // if cache is available, respond with cache
+        console.log('responding with cache : ' + e.request.url)
+        return request
+      } else {       // if there are no cache, try fetching request
+        console.log('file is not cached, fetching : ' + e.request.url)
+        return fetch(e.request)
+      }
 
-// Call Install Event
-self.addEventListener('install', e => {
-  console.log('Service Worker: Installed');
-
-  e.waitUntil(
-    caches
-      .open(cacheName)
-      .then(cache => {
-        console.log('Service Worker: Caching Files');
-        cache.addAll(cacheAssets);
-      })
-      .then(() => self.skipWaiting())
-  );
-});
-
-// Call Activate Event
-self.addEventListener('activate', e => {
-  console.log('Service Worker: Activated');
-  // Remove unwanted caches
-  e.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== cacheName) {
-            console.log('Service Worker: Clearing Old Cache');
-            return caches.delete(cache);
-          }
-        })
-      );
+      // You can omit if/else for console.log & put one line below like this too.
+      // return request || fetch(e.request)
     })
-  );
-});
+  )
+})
 
-// Call Fetch Event
-self.addEventListener('fetch', e => {
-  console.log('Service Worker: Fetching');
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
-});
+// Cache resources
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log('installing cache : ' + CACHE_NAME)
+      return cache.addAll(URLS)
+    })
+  )
+})
+
+// Delete outdated caches
+self.addEventListener('activate', function (e) {
+  e.waitUntil(
+    caches.keys().then(function (keyList) {
+      // `keyList` contains all cache names under your username.github.io
+      // filter out ones that has this app prefix to create white list
+      var cacheWhitelist = keyList.filter(function (key) {
+        return key.indexOf(APP_PREFIX)
+      })
+      // add current cache name to white list
+      cacheWhitelist.push(CACHE_NAME)
+
+      return Promise.all(keyList.map(function (key, i) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          console.log('deleting cache : ' + keyList[i] )
+          return caches.delete(keyList[i])
+        }
+      }))
+    })
+  )
+})
