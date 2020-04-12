@@ -1,48 +1,48 @@
 const CACHE_VERSION = 1;
 
 const BASE_CACHE_FILES = [
-    '/manifest.json',
-    '/_default/baseof.html',
-    '/_default/list.html',
-    '/_default/single.html',
-    '/_default/taxonomy.html',
-    '/_default/terms.html',
-    '/page/single.html',
-    '/post/list.html',
-    '/post/summary-with-image.html',
-    '/post/summary.html',
-    '/index.html',
-    '/404.html',
+    '/coffeeblog/static/manifest.json',
+    '/coffeeblog/static/layout/_default/baseof.html',
+    '/coffeeblog/static/layout/_default/list.html',
+    '/coffeeblog/static/layout/_default/single.html',
+    '/coffeeblog/static/layout/_default/taxonomy.html',
+    '/coffeeblog/static/layout/_default/terms.html',
+    '/coffeeblog/static/layout/page/single.html',
+    '/coffeeblog/static/layout/post/list.html',
+    '/coffeeblog/static/layout/post/summary-with-image.html',
+    '/coffeeblog/static/layout/post/summary.html',
+    '/coffeeblog/index.html',
+    '/coffeeblog/404.html',
 ];
 
 const OFFLINE_CACHE_FILES = [
-    '/_default/baseof.html',
-    '/_default/list.html',
-    '/_default/single.html',
-    '/_default/taxonomy.html',
-    '/_default/terms.html',
-    '/page/single.html',
-    '/post/list.html',
-    '/post/summary-with-image.html',
-    '/post/summary.html',
-    '/index.html',
+    '/coffeeblog/static/layout/_default/baseof.html',
+    '/coffeeblog/static/layout/_default/list.html',
+    '/coffeeblog/static/layout/_default/single.html',
+    '/coffeeblog/static/layout/_default/taxonomy.html',
+    '/coffeeblog/static/layout/_default/terms.html',
+    '/coffeeblog/static/layout/page/single.html',
+    '/coffeeblog/static/layout/post/list.html',
+    '/coffeeblog/static/layout/post/summary-with-image.html',
+    '/coffeeblog/static/layout/post/summary.html',
+    '/coffeeblog/index.html',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
-    '/_default/baseof.html',
-    '/_default/list.html',
-    '/_default/single.html',
-    '/_default/taxonomy.html',
-    '/_default/terms.html',
-    '/page/single.html',
-    '/post/list.html',
-    '/post/summary-with-image.html',
-    '/post/summary.html',
-    '/404.html',
+    '/coffeeblog/static/layout/_default/baseof.html',
+    '/coffeeblog/static/layout/_default/list.html',
+    '/coffeeblog/static/layout/_default/single.html',
+    '/coffeeblog/static/layout/_default/taxonomy.html',
+    '/coffeeblog/static/layout/_default/terms.html',
+    '/coffeeblog/static/layout/page/single.html',
+    '/coffeeblog/static/layout/post/list.html',
+    '/coffeeblog/static/layout/post/summary-with-image.html',
+    '/coffeeblog/static/layout/post/summary.html',
+    '/coffeeblog/404.html',
 ];
 
-const OFFLINE_PAGE = '/index.html';
-const NOT_FOUND_PAGE = '/404.html';
+const OFFLINE_PAGE = '/coffeeblog/index.html';
+const NOT_FOUND_PAGE = '/coffeeblog/404.html';
 
 const CACHE_VERSIONS = {
     assets: 'assets-v' + CACHE_VERSION,
