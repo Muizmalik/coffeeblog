@@ -15,6 +15,9 @@ const BASE_CACHE_FILES = [
     '/coffeeblog/404.html',
     '/coffeeblog/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css',
     '/coffeeblog/dist/js/app.3fc0f988d21662902933.js',
+    '/coffeeblog/images/coffee.jpg',
+    '/coffeeblog/images/coffee2.jpg',
+    '/coffeeblog/images/coffee3.jpg',
 ];
 
 const OFFLINE_CACHE_FILES = [
@@ -30,6 +33,9 @@ const OFFLINE_CACHE_FILES = [
     '/coffeeblog/index.html',
     '/coffeeblog/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css',
     '/coffeeblog/dist/js/app.3fc0f988d21662902933.js',
+    '/coffeeblog/images/coffee.jpg',
+    '/coffeeblog/images/coffee2.jpg',
+    '/coffeeblog/images/coffee3.jpg',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
@@ -45,6 +51,9 @@ const NOT_FOUND_CACHE_FILES = [
     '/coffeeblog/404.html',
     '/coffeeblog/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css',
     '/coffeeblog/dist/js/app.3fc0f988d21662902933.js',
+    '/coffeeblog/images/coffee.jpg',
+    '/coffeeblog/images/coffee2.jpg',
+    '/coffeeblog/images/coffee3.jpg',
 ];
 
 const OFFLINE_PAGE = '/coffeeblog/index.html';
