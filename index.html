@@ -223,14 +223,9 @@ Researchers have looked at the benefits of drinking coffee for conditions such a
     
     <script>
 // Make sure sw are supported
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/coffeeblog/static/sw.js')
-      .then(reg => console.log('Service Worker: Registered (Pages)'))
-      .catch(err => console.log(`Service Worker: Error: ${err}`));
-  });
-}
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/coffeeblog/static/sw.js', {scope: '/coffeeblog/'})
+  }
 
 </script>
 
