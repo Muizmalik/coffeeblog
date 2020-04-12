@@ -1,7 +1,8 @@
 const cacheName = 'v1';
 
 const cacheAssets = [
-  '/coffeeblog/static/manifest.json',
+    '/coffeeblog/layouts/index.html',
+    '/coffeeblog/static/manifest.json',
     '/coffeeblog/layouts/_default/baseof.html',
     '/coffeeblog/layouts/_default/list.html',
     '/coffeeblog/layouts/_default/single.html',
@@ -18,6 +19,7 @@ const cacheAssets = [
     '/coffeeblog/images/coffee.jpg',
     '/coffeeblog/images/coffee2.jpg',
     '/coffeeblog/images/coffee3.jpg',
+  
 ];
 
 // Call Install Event
