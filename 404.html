@@ -143,15 +143,9 @@
 
   <script src="/coffeeblog/dist/js/app.3fc0f988d21662902933.js"></script>
     <script>
- // Make sure sw are supported
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/coffeeblog/static/sw.js')
-      .then(reg => console.log('Service Worker: Registered (Pages)'))
-      .catch(err => console.log(`Service Worker: Error: ${err}`));
-  });
-}
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('sw.js', {scope: '/coffeeblog/'})
+  }
 </script>
 
   </body>
