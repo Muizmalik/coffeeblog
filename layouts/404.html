@@ -1,0 +1,22 @@
+<html>
+ <head>
+  <title>{{ .Title }}</title>
+ </head>
+ <body>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+ </body>
+</html>
