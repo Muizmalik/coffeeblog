@@ -19,7 +19,7 @@
     {{ template "_internal/pagination.html" . }}
   </article>
   <script>
- if (navigator.serviceWorker) {
+if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/coffeeblog/sw.js', {scope: '/coffeeblog/'})
   }
 </script>
