@@ -143,9 +143,18 @@
 
   <script src="/coffeeblog/dist/js/app.3fc0f988d21662902933.js"></script>
     <script>
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js', {scope: '/coffeeblog/'})
-  }
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/coffeeblog/static/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 </script>
 
   </body>
