@@ -21,6 +21,7 @@ const BASE_CACHE_FILES = [
 ];
 
 const OFFLINE_CACHE_FILES = [
+    '/static/manifest.json',
     '/layouts/_default/baseof.html',
     '/layouts/_default/list.html',
     '/layouts/_default/single.html',
@@ -39,6 +40,7 @@ const OFFLINE_CACHE_FILES = [
 ];
 
 const NOT_FOUND_CACHE_FILES = [
+    '/static/manifest.json',
     '/layouts/_default/baseof.html',
     '/layouts/_default/list.html',
     '/layouts/_default/single.html',
