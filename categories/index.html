@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
+    <link rel="manifest" href="/coffeeblog/static/manifest.json">
     <title>CoffeeDude! </title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.68.3" />
@@ -161,7 +161,20 @@
     
 
   <script src="/coffeeblog/dist/js/app.3fc0f988d21662902933.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/coffeeblog/static/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
 
+</script>
 
   </body>
 </html>
