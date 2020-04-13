@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/https://muizmalik.github.io/coffeeblog/"
 languageCode = "en-us"
 title = "CoffeeDude!"
 theme = "ananke"
